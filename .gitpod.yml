@@ -1,0 +1,10 @@
+
+vscode:
+  extensions:
+    - rocketseat.theme-omni
+    - pkief.material-icon-theme
+    - naumovs.color-highlight
+    - streetsidesoftware.code-spell-checker
+    - streetsidesoftware.code-spell-checker-portuguese
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
