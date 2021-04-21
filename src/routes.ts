@@ -5,7 +5,6 @@ const routes = Router()
 
 const settingsController = new SettingsController()
 
-routes.get('/settings', settingsController.index)
 routes.post('/settings', settingsController.create)
 
 export { routes }
