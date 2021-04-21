@@ -3,7 +3,9 @@ import { SettingsController } from './controllers/SettingsController'
 
 const routes = Router()
 
-routes.get('/settings', SettingsController.index)
-routes.post('/settings', SettingsController.create)
+const settingsController = new SettingsController()
+
+routes.get('/settings', settingsController.index)
+routes.post('/settings', settingsController.create)
 
 export { routes }
