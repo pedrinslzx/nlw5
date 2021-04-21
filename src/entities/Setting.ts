@@ -3,7 +3,6 @@ import { v4 as uuid } from 'uuid'
 
 @Entity('settings')
 class Setting {
-
   @PrimaryColumn()
   id: string
 
@@ -13,16 +12,15 @@ class Setting {
   @Column()
   chat: boolean
 
-  @CreateDateColumn({ name: 'created_at' })
-  createdAt: Date
+  @CreateDateColumn()
+  created_at: Date
 
-  @UpdateDateColumn({ name: 'updated_at' })
-  updatedAt: Date
+  @UpdateDateColumn()
+  updated_at: Date
 
-  constructor(){
-    if(!this.id) this.id = uuid() 
+  constructor() {
+    if (!this.id) this.id = uuid()
   }
-
 }
 
 export { Setting }
