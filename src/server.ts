@@ -1,31 +1,12 @@
 import express from 'express'
+import morgan from 'morgan'
+import './database'
+import { routes } from './routes'
 
 const app = express()
 
-
-/**
- * GET = Buscas
- * POST = Criação
- * PUT = Alteração
- * DELETE = Excluir/Deletar
- * PATCH = Alterar uma informação especifica
- */
-
-
-// Rota GET para '/'
-app.get('/', (request, response) => {
-  return response.json({
-    message: 'Olá NLW#05'
-  })
-})
-
-
-// Rota POST para '/users'
-app.post('/users', (request, response) => {
-  return response.json({
-    message: 'Usuário salvo com sucesso'
-  })
-})
-
+app.use(morgan('dev'))
+app.use(express.json())
+app.use(routes)
 
 app.listen(3333, () => console.log('Server is running on port 3333'))
