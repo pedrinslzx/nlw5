@@ -1,12 +1,7 @@
-import express from 'express'
-import morgan from 'morgan'
-import './database'
-import { routes } from './routes'
+import { httpServer } from './http'
+import './websockets/client'
+import './websockets/admin'
 
-const app = express()
-
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(routes)
-
-app.listen(3333, () => console.log('Server is running on port 3333'))
+httpServer.listen(process.env.PORT || 3333, () =>
+  console.log('Server is running on port 3333')
+)

@@ -1,9 +1,11 @@
 # ![NLW#05](./.github/nlw.png)
 
-## Projeto 
+## Projeto
+
+[![Chatty](./public/favicon.png)](#projeto)
 
 - Nome: Chatty
-- Techs: 
+- Techs:
   - WebSocket
   - HTTP
 
