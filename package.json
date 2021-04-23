@@ -9,7 +9,10 @@
     "dev": "ts-node-dev src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
     "migrate": "yarn typeorm migration:run",
-    "clean-db": "yarn migrate && rm src/database/database.sqlite && yarn migrate"
+    "clean-db": "yarn migrate && rm src/database/database.sqlite && yarn migrate",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint src/**/*.ts public/**/*.js --fix",
+    "lint:prettier": "prettier src/**/*.ts public/**/*.js public/**/*.css *.json --write"
   },
   "dependencies": {
     "dayjs": "^1.10.4",
